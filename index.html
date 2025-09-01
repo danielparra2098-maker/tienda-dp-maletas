@@ -1,13 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/img/logo.png">
-    <title>Tienda DP Maletas</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tienda DP Maletas</title>
+  <link rel="icon" href="img/logo.png">
+  <style>
+    :root{--brand:#111827;--cta:#00c853;--cta2:#0066cc}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;background:#f8fafc;color:#0f172a}
+    header{background:var(--brand);color:#fff;padding:18px 16px;text-align:center}
+    header img{height:42px;vertical-align:middle;border-radius:8px}
+    header .title{font-size:20px;font-weight:700;margin-left:10px;vertical-align:middle;display:inline-block}
+    .hero{padding:22px 16px;text-align:center;background:#fff;border-bottom:1px solid #e5e7eb}
+    .hero h1{margin:6px 0 8px;font-size:26px}
+    .hero p{margin:0;color:#475569}
+    .catalogo{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;padding:18px;max-width:1200px;margin:0 auto}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+    .card img{width:100%;aspect-ratio:4/5;object-fit:cover;background:#f1f5f9}
+    .card .body{padding:12px}
+    .name{font-weight:600;margin:2px 0 4px}
+    .price{display:flex;gap:10px;align-items:center;margin:2px 0 10px}
+    .old{color:#64748b;text-decoration:line-through;font-size:14px}
+    .now{font-size:18px;font-weight:700}
+    .cta{display:inline-block;text-align:center;background:var(--cta);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .cta.alt{background:var(--cta2)}
+    .grid-cta{display:flex;gap:8px;flex-wrap:wrap}
+    footer{border-top:1px solid #e5e7eb;background:#fff;padding:18px 16px;text-align:center;color:#64748b}
+    .note{max-width:900px;margin:0 auto 8px}
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="Logo" onerror="this.style.display='none'">
+    <span class="title">DP Maletas — 10kg</span>
+  </header>
+
+  <section class="hero">
+    <h1>Compra segura con Wompi (Nequi / Bancolombia)</h1>
+    <p>Envíos a toda Colombia · Soporte por WhatsApp 300 790 0388</p>
+  </section>
+
+  <section class="catalogo">
+    <!-- Items 1–5 a $130.000 -->
+    <div class="card">
+      <img src="img/maleta1.jpg" alt="Maleta 1">
+      <div class="body">
+        <div class="name">Maleta Cabina 10kg</div>
+        <div class="price"><span class="old">$229.900</span><span class="now">$130.000</span></div>
+        <a class="cta" target="_blank" href="https://checkout.wompi.co/l/test_JlQ7mF">🛒 Comprar ahora</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/maleta2.jpg" alt="Maleta 2">
+      <div class="body">
+        <div class="name">Maleta Cabina 10kg</div>
+        <div class="price"><span class="old">$229.900</span><span class="now">$130.000</span></div>
+        <a class="cta" target="_blank" href="https://checkout.wompi.co/l/test_JlQ7mF">🛒 Comprar ahora</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/maleta3.jpg" alt="Maleta 3">
+      <div class="body">
+        <div class="name">Maleta Cabina 10kg</div>
+        <div class="price"><span class="old">$229.900</span><span class="now">$130.000</span></div>
+        <a class="cta" target="_blank" href="https://checkout.wompi.co/l/test_JlQ7mF">🛒 Comprar ahora</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/maleta4.jpg" alt="Maleta 4">
+      <div class="body">
+        <div class="name">Maleta Cabina 10kg</div>
+        <div class="price"><span class="old">$229.900</span><span class="now">$130.000</span></div>
+        <a class="cta" target="_blank" href="https://checkout.wompi.co/l/test_JlQ7mF">🛒 Comprar ahora</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/maleta5.jpg" alt="Maleta 5">
+      <div class="body">
+        <div class="name">Maleta Cabina 10kg</div>
+        <div class="price"><span class="old">$229.900</span><span class="now">$130.000</span></div>
+        <a class="cta" target="_blank" href="https://checkout.wompi.co/l/test_JlQ7mF">🛒 Comprar ahora</a>
+      </div>
+    </div>
+
+    <!-- Items 6–9 a $140.000 -->
+    <div class="card">
+      <img src="img/maleta6.jpg" alt="Maleta 6">
+      <div class="body">
+        <div class="name">Maleta Cabina Premium 10kg</div>
+        <div class="price"><span class="old">$299.900</span><span class="now">$140.000</span></div>
+        <a class="cta alt" target="_blank" href="https://checkout.wompi.co/l/test_EexESQ">🛒 Comprar ahora</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/maleta7.jpg" alt="Maleta 7">
+      <div class="body">
+        <div class="name">Maleta Cabina Premium 10kg</div>
+        <div class="price"><span class="old">$299.900</span><span class="now">$140.000</span></div>
+        <a class="cta alt" target="_blank" href="https://checkout.wompi.co/l/test_EexESQ">🛒 Comprar ahora</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/maleta8.jpg" alt="Maleta 8">
+      <div class="body">
+        <div class="name">Maleta Cabina Premium 10kg</div>
+        <div class="price"><span class="old">$299.900</span><span class="now">$140.000</span></div>
+        <a class="cta alt" target="_blank" href="https://checkout.wompi.co/l/test_EexESQ">🛒 Comprar ahora</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/maleta9.jpg" alt="Maleta 9">
+      <div class="body">
+        <div class="name">Maleta Cabina Premium 10kg</div>
+        <div class="price"><span class="old">$299.900</span><span class="now">$140.000</span></div>
+        <a class="cta alt" target="_blank" href="https://checkout.wompi.co/l/test_EexESQ">🛒 Comprar ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="note">¿Dudas o compras al por mayor? Escríbenos por WhatsApp al <b>300 790 0388</b>.</div>
+    <div>© <script>document.write(new Date().getFullYear())</script> DP Maletas</div>
+  </footer>
+</body>
 </html>
